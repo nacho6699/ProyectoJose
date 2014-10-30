@@ -1,0 +1,68 @@
+	
+.fregistro
+{
+	margin: auto;
+	width: 400px;
+    border: 1px solid #CED5D7;
+    border-radius: 6px;
+    padding: 45px 45px 20px;
+    margin-top: 30px;
+    background-color: #C0C0C0;
+    box-shadow: 0px 5px 10px #000, 0 0 0 15px #707070 inset;
+}
+	
+.fregistro label
+{
+    display: block; 
+    font-weight: bold;
+    color:#0080FF;
+    text-align: left;
+}
+	
+	
+.fregistro input[type='text']
+{
+    padding: 7px 6px;
+    width: 294px;
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+
+.fregistro input[type='email']
+{
+    padding: 7px 6px;
+    width: 294px; 
+    border: 1px solid #CED5D7;
+    resize: none; 
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.fregistro input[type='password']{
+    padding: 7px 6px;
+    width: 294px; 
+    border: 1px solid #CED5D7;
+    resize: none; 
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+
+
+.boton {
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 	color:#0080C0;
+    background: #e4f1f6;
+
+}
+.fregistro button:hover{
+    background: #C0C0C0;
+    cursor: pointer;
+}
+.fregistro button:active{
+    background: #808080;
+}

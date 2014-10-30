@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+	{% block titulo %}
+	    <title>Login</title>
+	{% endblock %}
+
+	{% block menu %}
+	{% include "includes/menu_login.html" %}
+	{%endblock%}
+
+{% block contenido %}
+	
+	<div class="fregistro">
+		<form action="" method="post">
+			{% csrf_token %}
+			{{formulario.as_p}}
+			
+			<button type"submit" class="boton">Entrar</button>
+		</form>
+		
+	</div>
+{% endblock %}

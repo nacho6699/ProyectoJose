@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+	{% block titulo %}
+	    <title>Perfil</title>
+	{% endblock %}
+
+	{% block menu %}
+	{% include "includes/menu_login.html" %}
+	{%endblock%}
+
+{% block contenido %}
+	
+	<div class="perfil">
+		<h3>Bienvenido {{ user.get_username }}</h3>
+		<img src="/media/{{ user.perfil.avatar}}" alt="avatar">
+	</div>
+{% endblock %}

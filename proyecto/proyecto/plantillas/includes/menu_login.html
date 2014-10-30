@@ -1,0 +1,14 @@
+	<nav id="menu">
+
+		<ul id="submenu">
+			<li><a href="/inicio/" ><b>Inicio >></b></a></li>
+			<li><a href="/inicio/registrar/">Registrarse</a></li>
+			{% if user.is_authenticated %}
+				<li id="activo"><a href="/inicio/logout/">Salir</a></li>
+			{% else %}
+			  	<li id="activo"><a href="/inicio/login/">Login</a></li>
+			{% endif %}
+		</ul>	
+	</nav>
+	<div id="menubajo">TriviaOnline.bo</div><br><br>
+	
