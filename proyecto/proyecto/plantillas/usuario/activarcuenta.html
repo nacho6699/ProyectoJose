@@ -10,6 +10,7 @@
 {% block contenido %}
 	
 	<div class="fregistro">
+		<h3>Bienvenido {{ user.get_username }}</h3>
 			<form action="" method="post" enctype="multipart/form-data">
 				{% csrf_token %}
 				{{ formulario.as_p }}

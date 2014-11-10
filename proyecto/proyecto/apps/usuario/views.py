@@ -30,6 +30,13 @@ def view_registrar(request):
 def view_login(request):
 	if request.method=="POST":
 		formulario=AuthenticationForm(request.POST)
+		if request.session['cont']>3:
+			formularioC=FCaptcha(request.POST)
+			if formularioC.is_valid():
+				pass
+			else:
+				datos={'formulario':formulario,'formularioC':formularioC}	
+				return render_to_response("usuario/login.html",datos,context_instance=RequestContext(request))
 		if formulario.is_valid:
 			usuario=request.POST['username']
 			contrasena=request.POST['password']
@@ -37,13 +44,24 @@ def view_login(request):
 			if acceso is not None:
 				if acceso.is_active:
 					login(request, acceso)
+					del request.session['cont']
 					return HttpResponseRedirect("/inicio/perfil/")
 				else:
 					login(request, acceso)
 					return HttpResponseRedirect("/inicio/activarcuenta/")
 			else:
-				return HttpResponse("<h1>Error al entrar verifica tus datos</h1>")
+				request.session['cont']=request.session['cont']+1
+				cantidad=request.session['cont']
+				estado=True
+				msj="Error de datos..."+str(cantidad)
+				if cantidad>3:
+					formularioC=FCaptcha
+					datos={'formulario':formulario,'formularioC':formularioC,'estado':estado,'msj':msj}
+				else:
+					datos={'formulario':formulario,'estado':estado,'msj':msj}
+				return render_to_response("usuario/login.html",datos,context_instance=RequestContext(request))
 	else:
+		request.session['cont']=0
 		formulario=AuthenticationForm()
 	return render_to_response("usuario/login.html",{'formulario':formulario},context_instance=RequestContext(request))
 						

@@ -10,7 +10,10 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth.models import User
 from django.contrib.auth import login, authenticate, logout
 
+from captcha.fields import ReCaptchaField
 
+class FCaptcha(forms.Form):
+	captcha = ReCaptchaField()
 
 class fPerfil(ModelForm):
 	class Meta:

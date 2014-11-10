@@ -1,17 +1,19 @@
-	
-.fregistro
+.flogin
 {
-	margin: auto;
-	width: 400px;
+    margin-left: 30%;
+    position:fixed;
+	
+	width: 420px;
     border: 1px solid #CED5D7;
     border-radius: 6px;
     padding: 45px 45px 20px;
-    margin-top: 30px;
+    margin-top: 40px;
     background-image:url("/media/imgInicio/fondo2.jpg");
     box-shadow: 0px 5px 10px #000, 0 0 0 15px #272822 inset;
+
 }
 	
-.fregistro label
+.flogin label
 {
     display: block; 
     font-weight: bold;
@@ -20,7 +22,7 @@
 }
 	
 	
-.fregistro input[type='text']
+.flogin input[type='text']
 {
     padding: 7px 6px;
     width: 294px;
@@ -29,7 +31,7 @@
     margin: 5px 0;
 }
 
-.fregistro input[type='email']
+.flogin input[type='email']
 {
     padding: 7px 6px;
     width: 294px; 
@@ -38,7 +40,7 @@
     box-shadow:0 0 0 3px #EEF5F7;
     margin: 5px 0;
 }
-.fregistro input[type='password']{
+.flogin input[type='password']{
     padding: 7px 6px;
     width: 294px; 
     border: 1px solid #CED5D7;
@@ -59,10 +61,17 @@
     background: #e4f1f6;
 
 }
-.fregistro button:hover{
+.flogin button:hover{
     background: #808080;
     cursor: pointer;
 }
-.fregistro button:active{
+.flogin button:active{
     background: #00FFFF;
+}
+.error
+{
+    border: 1px solid #FFFFFF;
+    background-color: #C0C0C0;
+    color:red;
+    text-align: left;
 }

@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'proyecto.apps.usuario',
+    'captcha',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,7 +68,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-bo'
 
 TIME_ZONE = 'UTC'
 
@@ -86,3 +87,6 @@ MEDIA_URL="/media/"
 TEMPLATE_DIRS=(os.path.join(RUTA_PROYECTO,"plantillas"),)
 STATICFILES_DIRS=(os.path.join(RUTA_PROYECTO,"static"),)
 MEDIA_ROOT=os.path.join(RUTA_PROYECTO,"media")
+
+RECAPTCHA_PUBLIC_KEY = '6Ld8d_0SAAAAAD2mxBDxsAwIf-qZLDHARDNy5due'
+RECAPTCHA_PRIVATE_KEY = '6Ld8d_0SAAAAAMmyYyjRuR-xEDddUbsFxPp94FTl'
