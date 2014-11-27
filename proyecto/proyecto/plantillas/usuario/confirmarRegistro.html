@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 	{% block titulo %}
-	    <title>Registro</title>
+	    <title>Confirmar Registro</title>
 	{% endblock %}
 
 	{% block menu %}
 	{% include "includes/menu_registro.html" %}
 	{%endblock%}
+
 {% block contenidoIz %}
 	
 
@@ -28,14 +29,9 @@
 {% endblock %}	
 
 {% block contenido %}
-	
-	<div class="fregistro">
-		<label for="registro"><br><font size="5" color="#C0C0C0">INTRODUCE TUS DATOS:</font></label><br>
-		<form action="" method="post">
-			{{formulario.as_p}}
-			{% csrf_token %}
-			<button type"submit" class="boton">Registrar</button>
-		</form>
-		
+
+	<div class="fregistro_confirmar">
+		<h1><label for="mensaje">Te Registraste Exitosamente!!!</label></h1>
+		<li><a href="/inicio/login/">Continuar</a></li>
 	</div>
 {% endblock %}

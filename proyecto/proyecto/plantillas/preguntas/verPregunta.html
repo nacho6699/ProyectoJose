@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+	    <title>temas</title>
+{% endblock %}
+	{% block menu %}
+	{% include "includes/menu_login.html" %}
+	{%endblock%}
+
+{% block contenidoIz %}
+	<div class="perfil">
+		<img src="{{ user.perfil.avatar.url_200x200}}" alt="avatar">
+		<h3>Activ@ : {{ user.get_username }}</h3>
+	</div>
+	
+	<ul id="datos">
+		<li>Puntos :</li>
+		<li>Ganadas :</li>
+		<li>Perdidas :</li>
+	</ul>
+	<ul id="preguntas">
+		<li><a href="/inicio/modificar/">Editar Perfil</a></li><br><br>
+		<li><a href="/inicio/registro/tema/">Editar preguntas</a></li>
+	</ul>
+	
+{% endblock %}
+
+{% block contenido %}
+<div class="registroTema">
+
+	<div>
+		<li>Listado de preguntas:</li>
+		{% for i in preguntas %}
+			<div id="lista">
+				<span class="categoria">{{i.nombre}}</span>
+				
+				<a href="/inicio/pregunta/edit/{{i.id}}/">Editar Pregunta</a>
+				<a href="/inicio/pregunta/eliminar/{{i.id}}/" onclick="return confirm('¿Estas seguro se eleminar la pregunta?;')">Eliminar Pregunta</a>
+			</div>
+		{% empty %}
+			<h3>Noexiste Preguntas</h3>
+		{% endfor %}
+	</div>
+</div>	
+{% endblock %}	

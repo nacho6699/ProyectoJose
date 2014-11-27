@@ -13,4 +13,5 @@ urlpatterns = patterns('',
 	url(r'^registrar/$',view_registrar),
 	url(r'^perfil/$',view_perfil),
 	url(r'^activarcuenta/$',view_activarcuenta),
+	url(r'^modificar/$',modificar_perfil),
 )

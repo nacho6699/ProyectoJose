@@ -20,6 +20,12 @@ class fPerfil(ModelForm):
 		model=Perfil
 		exclude=['user']
 
+class fperfil_modificar(ModelForm):
+	class Meta:
+		model=Perfil
+		exclude=['user']
+		
+
 class fUsuario(UserCreationForm):
 	username=forms.CharField(max_length=50,required=True,help_text=False,label="Nick:")
 	password2=forms.CharField(help_text=False,label="Confirmar pasword:",widget=forms.PasswordInput)

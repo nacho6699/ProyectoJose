@@ -22,7 +22,7 @@ def view_registrar(request):
 			usuario.save()
 			
 			perfil=Perfil.objects.create(user=usuario)
-			return HttpResponse("Se registro correctamente ")
+			return render_to_response("usuario/confirmarRegistro.html",{},context_instance=RequestContext(request))
 	else:
 		formularioRegistro=fUsuario()
 	return render_to_response("usuario/registrar.html",{'formulario':formularioRegistro},context_instance=RequestContext(request))
@@ -92,3 +92,19 @@ def view_activarcuenta(request):
 			return render_to_response("usuario/activarcuenta.html",{'formulario':formulario},context_instance=RequestContext(request))
 	else:
 		return HttpResponseRedirect("/login/")
+
+def modificar_perfil(request):
+	if request.user.is_authenticated():
+		u=request.user
+		usuario=User.objects.get(username=u)
+		perfil=Perfil.objects.get(user=usuario)
+		if request.method=='POST':
+			formulario=fperfil_modificar(request.POST,request.FILES,instance=perfil)
+			if formulario.is_valid():
+				formulario.save()
+				return HttpResponseRedirect("/inicio/perfil/")
+		else:
+			formulario=fperfil_modificar(instance=perfil)
+			return render_to_response('usuario/modificar_perfil.html',{'formulario':formulario},context_instance=RequestContext(request))
+	else:
+		return HttpResponseRedirect("/inicio/")		

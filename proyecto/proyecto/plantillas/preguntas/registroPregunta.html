@@ -1,12 +1,11 @@
 {% extends "base.html" %}
-	{% block titulo %}
-	    <title>Perfil</title>
-	{% endblock %}
 
+{% block title %}
+	    <title>temas</title>
+{% endblock %}
 	{% block menu %}
 	{% include "includes/menu_login.html" %}
 	{%endblock%}
-
 {% block contenidoIz %}
 	<div class="perfil">
 		<img src="{{ user.perfil.avatar.url_200x200}}" alt="avatar">
@@ -26,6 +25,20 @@
 {% endblock %}	
 
 {% block contenido %}
+<div class="registroTema">
+	{% if estado %}
+		<div id="msjRegistrado">
+		 <h3>Se a registrado la pregunta</h3>
+		</div>
+	{% endif %}
+	<form action="" method="post">
+	<legend>{{titulo}}</legend>
+		{{formulario.as_p}}
+	<legend>{{titulo2}}</legend>
+		{{formulario2.as_p}}
+		{% csrf_token%}
+		<input type="submit" name="benviar" value="Registrar">
+	</form>
 	
-
-{% endblock %}
+</div>	
+{% endblock %}	

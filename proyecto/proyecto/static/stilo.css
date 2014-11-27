@@ -80,7 +80,8 @@ body
 
 .cuerpoIz
 {
-	background-image:url("/media/imgInicio/fondo6.jpg");
+	/*background-image:url("/media/imgInicio/fondo6.jpg");*/
+	background-color: #80FFFF;
 	border: 2px solid #00FFFF;
 	float: left;
  	width: 280px;
@@ -94,6 +95,7 @@ body
 }
 .cuerpo
 {
+	padding: 20px;
 	border: 3px #000;
 	width:70%;
 	margin: 125px 25%;
@@ -125,10 +127,10 @@ body
 {
 	width: 95%;
 	text-align: center;
-	color:#fff;
+	color:#000;
 	border-radius: 15px;
 	margin-left:1%;
-	text-shadow: 2px 2px 2px #000;
+	text-shadow: 2px 2px 2px #fff;
 	position: absolute;
 
 }

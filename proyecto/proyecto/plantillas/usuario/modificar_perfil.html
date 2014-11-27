@@ -6,7 +6,6 @@
 	{% block menu %}
 	{% include "includes/menu_login.html" %}
 	{%endblock%}
-
 {% block contenidoIz %}
 	<div class="perfil">
 		<img src="{{ user.perfil.avatar.url_200x200}}" alt="avatar">
@@ -23,9 +22,20 @@
 		<li><a href="/inicio/registro/tema/">Editar preguntas</a></li>
 	</ul>
 	
-{% endblock %}	
+{% endblock %}
 
 {% block contenido %}
 	
-
+	<div class="fregistro">
+		<div class="row">
+			<form action="" method="post" enctype="multipart/form-data">
+			<legend><h2>Sube una nueva foto</h2></legend>
+		        {% csrf_token %}
+		        {{ formulario.as_p }}
+		    
+		    <button type="submit">Registrar</button>
+		       
+		    </form>	
+		</div>
+	</div>
 {% endblock %}
