@@ -1,0 +1,41 @@
+html{height: 100%;}
+/*body {
+	margin: 0px; padding: 0px;
+}*/
+.contenido{
+	border: solid 1px green;
+	width: 90%;
+	margin: 0 auto;
+	margin-top: 10px;
+	display: block;
+	padding: 10px;
+	height: 400px;
+
+}
+#pagina{
+	background-color: #000000;
+	margin: 0px auto;
+	margin-top: 50px;
+	border: solid 1px cyan;
+	width:300px; 
+	height:380px; 
+	color:cyan;
+	overflow:scroll;
+}
+
+
+
+
+/*header{
+	background: black;
+	color: white;
+	height: 50px;
+	padding: 5px;
+	line-height: 10px;
+}
+footer{ padding: 5px; background: black; color: white; bottom: 0; position: absolute; 
+	width: 100%;
+	margin: 0px;
+	height: 50px;
+	text-align: center;
+}*/

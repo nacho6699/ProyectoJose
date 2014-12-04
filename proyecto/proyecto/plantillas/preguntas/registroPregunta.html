@@ -32,12 +32,13 @@
 		</div>
 	{% endif %}
 	<form action="" method="post">
-	<legend>{{titulo}}</legend>
+	<font color="#80FF80" size="5"><legend>{{titulo}}</legend></font>
 		{{formulario.as_p}}
-	<legend>{{titulo2}}</legend>
+	<font color="#80FF80" size="4"><legend>{{titulo2}}</legend></font>
 		{{formulario2.as_p}}
 		{% csrf_token%}
-		<input type="submit" name="benviar" value="Registrar">
+		<input type="submit" name="benviar" value="Registrar"><br><br>
+		<div class="volver"><a href="/inicio/perfil/">Cancelar</a></div>
 	</form>
 	
 </div>	

@@ -32,14 +32,14 @@ body
 	position:fixed;
 	border-radius:10px 10px 0px 0px;
 	border-top: 5px solid #000000;
-
+	color:#00FFFF;
 	border-bottom: 7px solid #00FFFF;
 	width:85%;
 	height:60px;
 	margin-left: 93px;
 	margin-top: 65px;
 	font-size: 50px;
-	text-shadow:1px 1px 0px #FFF;
+	text-shadow:1px 1px 0px #C0C0C0;
 	font-weight: bold;
 	background-image:url("/media/imgInicio/banner.png");
 }
@@ -119,7 +119,7 @@ body
 	background-color: #373737;
 	color: #FF8000;
 	position: absolute;
-	margin-top:-12%;
+	margin-top:-6%;
 	
 }
 
@@ -145,4 +145,5 @@ body
 	box-shadow: 0px 5px 5px #000000, 0 0 0 2px red inset;
 	
 }
+/*para la parte de node*/
 

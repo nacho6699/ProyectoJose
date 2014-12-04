@@ -36,8 +36,8 @@
 	<legend>{{titulo}}</legend>
 		{{formulario.as_p}}
 		{% csrf_token%}
-		<input type="submit" name="benviar" value="Registrar">
-		<li><a href="/inicio/perfil/">Cancelar</a></li>
+		<input type="submit" name="benviar" value="Registrar"><br><br>
+		<div class="volver"><a href="/inicio/perfil/">Cancelar</a></div>
 	</form><br>
 	<div>
 		{% for i in temas %}

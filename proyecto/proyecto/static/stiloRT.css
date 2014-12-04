@@ -1,9 +1,9 @@
 .registroTema
 {
-	font-size: 20px;
+	font-size: 15px;
 	margin-left: 10px;
 	text-align: left;
-	color:#FFFF00;
+	color:#00E1E1;
 }
 #msjRegistrado
 {
@@ -11,16 +11,18 @@
 }
 #lista 
 {
-	
+	background-color: #00BFBF;
 	border: 2px solid #C0C0C0;
 	padding:10px;
-	width: 80%;
+	min-width: 20%;
 	border-radius: 10px;
 }
 #lista span
 {
 	font-size: 18px;
-	color:#fff;
+	color:#000000;
+	width:10%;
+	text-shadow:1px 1px 0px #FFF;
 }
 #lista a
 {
@@ -28,6 +30,7 @@
 	color:#00FFFF;
 	background-color:#6F6F6F; 
 	padding:10px;
+	border-radius: 10px;
 }
 #lista a:hover
 {
@@ -49,4 +52,42 @@
     resize: none; 
     box-shadow:0 0 0 3px #EEF5F7;
     margin: 5px 0;
+}
+
+.registroTema input[type='submit']
+{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 	color:#0080C0;
+    background: #e4f1f6;
+}
+.registroTema input[type='submit']:hover
+{
+    background: #00FFFF;
+}
+.volver a
+{
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-shadow: 1px 1px 0px white;
+ 	color:#0080C0;
+    background: #e4f1f6;
+}
+.volver a:hover
+{
+	background: #00FFFF;
+}
+.registroTema
+{
+    color: #00FFFF;
+    border-radius: 6px;
+    padding: 10px 45px 20px;
+    margin-top: 20px;
+    margin-left: 5%;
 }

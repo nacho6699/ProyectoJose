@@ -9,8 +9,8 @@
 
 {% block contenidoIz %}
 	<div class="perfil">
-		<img src="{{ user.perfil.avatar.url_200x200}}" alt="avatar">
-		<h3>Activ@ : {{ user.get_username }}</h3>
+		<img id="nombre2" src="{{ user.perfil.avatar.url_200x200}}" alt="avatar">
+		<h3>Activ@ : <label id="nombre">{{ user.get_username }}</label></h3>
 	</div>
 	
 	<ul id="datos">
@@ -27,5 +27,18 @@
 
 {% block contenido %}
 	
+<div id="chat">
+<div id="pagina"></div>
+
+<div id="controles">
+	<input type="text" id="mensaje" placeholder="ingresa el mensaje"/>
+	<input id="enviar" type="button" value="enviar">
+
+</div>
+
+</div>
+<div id="irjuego"><li><a href="#">Ir al Juego</a></li></div>
+
+
 
 {% endblock %}
