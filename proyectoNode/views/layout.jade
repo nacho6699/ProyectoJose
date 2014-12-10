@@ -1,10 +1,15 @@
-doctype 5 html
-block head
-	title=title
-	link(rel='stylesheet', href='/stylesheets/style.css')
-	script(type='text/javascript', src='/javascripts/jquery.js')
-body
-	header#banner
-		h1 Chat
-	block contenido
-footer 2014
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    
+    script(src="/javascripts/jquery-2.1.0.min.js")
+    
+    script(src="/javascripts/site.js")
+    script(src="/socket.io/socket.io.js")
+    
+  body
+
+         
+    block content

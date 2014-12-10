@@ -1,41 +1,87 @@
-html{height: 100%;}
-/*body {
-	margin: 0px; padding: 0px;
-}*/
-.contenido{
-	border: solid 1px green;
-	width: 90%;
-	margin: 0 auto;
-	margin-top: 10px;
-	display: block;
-	padding: 10px;
-	height: 400px;
 
+.contenedorchat
+{
+	border: 3px solid #00D5D5;
+	width: 500px;
+	height: 430px;
+	background-color: #00FFFF;
 }
-#pagina{
-	background-color: #000000;
-	margin: 0px auto;
-	margin-top: 50px;
-	border: solid 1px cyan;
-	width:300px; 
-	height:380px; 
-	color:cyan;
+
+#mensajes
+{
+	border: 2px solid #000000;
+	padding: 15px;
+	height: 270px;
+	width: 89%;
+	background-color: #000;
+	color:#FFFF80;
+	text-align: left;
 	overflow:scroll;
 }
-
-
-
-
-/*header{
-	background: black;
-	color: white;
-	height: 50px;
-	padding: 5px;
-	line-height: 10px;
+#usuarios
+{
+	border: 2px solid #FFFF00;
+	padding: 10px;
+	margin-top: 10px;
+	text-align: left;
+	font-size:15px;
+	height: 280px;
+	 font-weight: bold;
 }
-footer{ padding: 5px; background: black; color: white; bottom: 0; position: absolute; 
+#usuarios li
+{
+	
+}
+.contenedorjuego
+{
+	border: 3px solid #FF00FF;
+}
+.table
+{
+	border: 2px solid #00FFFF;
+	padding: 10px;
+	height: 395px;
 	width: 100%;
-	margin: 0px;
-	height: 50px;
-	text-align: center;
-}*/
+}
+.table th
+{
+	border: 3px solid #80FFFF;
+	width: 70%;
+	background-color: #FFFF80;
+	color: #000000;
+	text-shadow:5px 0px 3px #00FFFF;
+}
+#nom
+{
+	border: 3px solid #C0C0C0;
+	color:#00FFFF;
+	border-radius: 5px 5px 5px 5px;
+	background-color: #333333;
+	 font-weight: bold;
+}
+#nom h4
+{
+	color:#FFFF00;
+}
+#nickname {
+    border: 1px solid #CED5D7;
+   
+    width: 60px;
+    height: 20px;
+    font-weight: bold;
+ 	color:#0080C0;
+    background:#00FFFF;
+}
+#nickname:hover 
+{
+    background-color: #FFFFFF;
+}
+.contenedorchat input[type='text']
+{
+    padding: 7px 6px;
+    width: 294px;
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: -12px 0;
+    text-align: left;
+}
