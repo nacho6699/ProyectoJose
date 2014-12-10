@@ -30,13 +30,12 @@ class fUsuario(UserCreationForm):
 	username=forms.CharField(max_length=50,required=True,help_text=False,label="Nick:")
 	password2=forms.CharField(help_text=False,label="Confirmar pasword:",widget=forms.PasswordInput)
 	email=forms.EmailField(max_length=50,required=True,label="Email:")
-
-class Meta:
-	model=User
-	fields=("username","password1","password2","email")
-def save(self, commit=True):
-	user=super(fUsuario.self).save(commit=False)
-	user.email=self.cleaned_data.get("email")
-	if commit:
-		user.save()
-	return user
+	class Meta:
+		model=User
+		fields=("username","password1","password2","email")
+	def save(self, commit=True):
+		user=super(fUsuario.self).save(commit=False)
+		user.email=self.cleaned_data.get("email")
+		if commit:
+			user.save()
+		return user

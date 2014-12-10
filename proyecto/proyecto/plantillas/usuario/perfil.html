@@ -28,16 +28,83 @@
 {% block contenido %}
 	
 <div id="chat">
-<div id="pagina"></div>
+<div class="nombre">
+	ENTRAR AL CHAT CON >><input id="nickname" type="button" value={{ user.get_username }}>
+</div>
+<div id="content">
+<div class="contenedorchat"
 
-<div id="controles">
-	<input type="text" id="mensaje" placeholder="ingresa el mensaje"/>
-	<input id="enviar" type="button" value="enviar">
+>
+		<table class="table">
+			<tr>
+				<th>Mensajes</th>
+				<th>Conectados</th>
+			</tr>
+			<tr>
+				<td><ul id="mensajes"></ul></td>
+				<td><ul id="usuarios"></ul></td>
+			</tr>
+		</table>
+		<input type="text" id="menvio" placeholder="Escribe aqui tu mensaje...">
+	
+</div>
+</div>
+</div>
+<div id="juego">
+	<div id="crear">
+		<input class="botonjuego" type="button" value="CREAR PARTIDA">
+	</div><br>
+	<div id="crearrapido">
+		<input class="botonjuego" type="button" value="JUEGO RAPIDO">
+	</div>
+<div class="crearjuego">
 
+		<form id="fjuego" action="" method="post">
+			{% csrf_token %}
+			<label>Titulo:</label><br>
+			<input type="text"  name="username" id="inputEmail3" placeholder="Ingrese su nick"><br>
+			<label>Tipo de partida :</label><br>
+			<input type="radio" name="group1" value="Milk"> Publica
+			<input type="radio" name="group1" value="Butter" checked> Privada<br><br>
+			<label>Preguntas:</label>
+			<select name="nro"> 
+				
+   				<option value="1">5</option> 
+  				<option value="2">10</option> 
+  				<option value="3">15</option>
+  				<option value="3">20</option>  
+			</select><br>
+			<label>Tiempo de respuesta:</label>
+			<select name="nro"> 
+				
+   				<option value="1">15 segundos</option> 
+  				<option value="2">20 segundos</option> 
+  				<option value="3">25 segundos</option>
+  				<option value="3">30 segundos</option> 
+  				<option value="3">35 segundos</option>
+  				<option value="3">40 segundos</option>
+  				<option value="3">45 segundos</option>
+  				<option value="3">50 segundos</option> 
+  				<option value="3">55 segundos</option>
+  				<option value="3">60 segundos</option>
+			</select><br><br>
+			<label>Categorias:</label><br>
+				<input type="checkbox" name="pasa" value="ciencia">Ciencia<br>
+				<input type="checkbox" name="pasa" value="Biologia">Historia<br>
+				<input type="checkbox" name="pasa" value="Redes">Redes <br><br>
+		
+			<button type="submit" class="botoncrear">Crear partida</button>
+			<button type="reset" class="cancelar">Cancelar</button>
+		</form>
+		
+</div>
+<div id="partidacreada">
+	<ul id="partidas"></ul>
+</div>
 </div>
 
-</div>
-<div id="irjuego"><li><a href="#">Ir al Juego</a></li></div>
+
+
 
 
 

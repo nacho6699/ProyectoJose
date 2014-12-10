@@ -8,14 +8,51 @@
 	<link rel="stylesheet" href="/static/stiloL.css">
 	<link rel="stylesheet" href="/static/stiloRT.css">
 	<link rel="stylesheet" href="/static/stiloP.css">
-
-	<link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css" >
 	<script src="/static/jquery-2.1.0.min.js" type="text/javascript" async defer ></script>
+
+	<link rel="stylesheet" href="http://localhost:3000/stylesheets/style.css">
 	<script src="http://localhost:3000/socket.io/socket.io.js" type="text/javascript" async defer ></script>
 
-	<script src="http://localhost:3000/javascripts/cliente.js" type="text/javascript" async defer></script>
+
+
+	<script src="http://localhost:3000/javascripts/site.js" type="text/javascript" async defer ></script>
+	<script src="http://localhost:3000/javascripts/jquery-2.1.0.min.js" type="text/javascript" async defer></script>
 	
-	<script src="http://localhost:3000/javascripts/jquery.js" type="text/javascript" async defer></script>	
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$('.crearjuego').toggle()
+	    $("#crear").click(function () {	 
+	        $('.crearjuego').toggle(1000);
+	        $('#crear').toggle("slow");
+	        $('#crearrapido').toggle("slow");
+	         });
+	    $(".cancelar").click(function () {	 
+	        $('#crear').toggle(1000);
+	        $('#crearrapido').toggle(1500);
+	        $('.crearjuego').toggle("swing");
+	         });
+	    $('#partidacreada').toggle();
+	    $("#crearrapido").click(function () {	 
+	        
+	        $('#crear').toggle("slow");
+	        $('#crearrapido').toggle("slow");
+	         });
+
+	    
+	    });
+	</script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+		
+	    $(".botonjuego").click(function () {	 
+	        $('#crear').toggle("slow");
+	        $('#crearrapido').toggle("slow");
+	    });
+	</script>
+
+   
+
+
 	
 	{% block titulo %}
 	{%  endblock %}

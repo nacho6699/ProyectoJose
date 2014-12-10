@@ -108,3 +108,8 @@ def modificar_perfil(request):
 			return render_to_response('usuario/modificar_perfil.html',{'formulario':formulario},context_instance=RequestContext(request))
 	else:
 		return HttpResponseRedirect("/inicio/")		
+
+def sala_chat(request):
+	return render_to_response("usuario/saladechat.html",{},context_instance=RequestContext(request))
+
+

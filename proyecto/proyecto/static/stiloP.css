@@ -44,30 +44,98 @@
 #chat
 {
 	border:2px solid #FFFFFF;
-	max-height: 455px;
-	width: 40%;
+	height: 480px;
+	width: 55%;
+	color: #FFFF00;
 }
 
-#irjuego
+#juego
 {
-	padding: 10;
-	border: 2px solid red;
-	margin-left: 70%;
+	height: 460px;
+	width: 386px;
+	padding: 10px;
+	border: 2px solid #C0C0C0;
+	margin-left: 56%;
+	margin-top:-52%;
 
 }
-#irjuego li
+
+/*para el formulario del juego*/
+.crearjuego
 {
-	background-color: #80FFFF;
-	padding:15px;
-	border: 2px solid #00FFFF ;
-	width:150px;
-	height:50px;
-	border-radius:15px 0px 15px 0px;
-	text-align: center;
+    
+	width: 380px;
+    border: 1px solid #CED5D7;
+    border-radius: 6px;
+    padding:5px;
+    color:#FFFF00;
+    background-image:url("/media/imgInicio/fondo2.jpg");
+    box-shadow: 0px 5px 10px #000, 0 0 0 15px #272822 inset;
+    
 }
-#irjuego a
+.crearjuego input[type='text']
 {
-	
-	color:#808080;
-	text-decoration: none;
+    padding: 5px 5px;
+    width: 294px;
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: 5px 0;
+}
+.crearjuego label
+{
+    display: block; 
+    font-weight: bold;
+    color:#00FFFF;
+}
+.botoncrear {
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 2px 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 	color:#0080C0;
+    background: #e4f1f6;
+
+}
+.botoncrear:hover
+{
+	background-color: #80FF80;
+}
+.cancelar {
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 2px 5px;
+    border-radius: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 	color:#0080C0;
+    background: #e4f1f6;
+
+}
+.cancelar:hover
+{
+	background-color: #80FF80;
+}
+.botonjuego {
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    padding: 8px 16px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0px white;
+ 	color:#0080C0;
+    background: #80FFFF;
+    display:inline-block;
+    width: 250px;
+
+}
+.botonjuego:hover 
+{
+	background-color: #FFFF00;
+}
+#partidacreada
+{
+	border: 3px solid #FFFF00;
+	min-height: 300px;
 }

@@ -1,0 +1,87 @@
+
+.contenedorchat
+{
+	border: 3px solid #00D5D5;
+	width: 500px;
+	height: 430px;
+	background-color: #00FFFF;
+}
+
+#mensajes
+{
+	border: 2px solid #000000;
+	padding: 15px;
+	height: 270px;
+	width: 89%;
+	background-color: #000;
+	color:#FFFF80;
+	text-align: left;
+	overflow:scroll;
+}
+#usuarios
+{
+	border: 2px solid #FFFF00;
+	padding: 10px;
+	margin-top: 10px;
+	text-align: left;
+	font-size:15px;
+	height: 280px;
+	 font-weight: bold;
+}
+#usuarios li
+{
+	
+}
+.contenedorjuego
+{
+	border: 3px solid #FF00FF;
+}
+.table
+{
+	border: 2px solid #00FFFF;
+	padding: 10px;
+	height: 395px;
+	width: 100%;
+}
+.table th
+{
+	border: 3px solid #80FFFF;
+	width: 70%;
+	background-color: #FFFF80;
+	color: #000000;
+	text-shadow:5px 0px 3px #00FFFF;
+}
+#nom
+{
+	border: 3px solid #C0C0C0;
+	color:#00FFFF;
+	border-radius: 5px 5px 5px 5px;
+	background-color: #333333;
+	 font-weight: bold;
+}
+#nom h4
+{
+	color:#FFFF00;
+}
+#nickname {
+    border: 1px solid #CED5D7;
+   
+    width: 60px;
+    height: 20px;
+    font-weight: bold;
+ 	color:#0080C0;
+    background:#00FFFF;
+}
+#nickname:hover 
+{
+    background-color: #FFFFFF;
+}
+.contenedorchat input[type='text']
+{
+    padding: 7px 6px;
+    width: 294px;
+    border: 1px solid #CED5D7;
+    box-shadow:0 0 0 3px #EEF5F7;
+    margin: -12px 0;
+    text-align: left;
+}

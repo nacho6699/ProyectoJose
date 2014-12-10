@@ -56,6 +56,7 @@ def ver_pregunta(request,id):
 def edit_pregunta(request,id):
 	pregunta=Pregunta.objects.get(id=int(id))
 	respuesta=Respuesta.objects.get(pregunta=pregunta)
+	id=pregunta.tema.id
 	titulo="Editar pregunta"
 	titulo2="Editar las respuestas"
 	if request.method=="POST":
@@ -66,7 +67,7 @@ def edit_pregunta(request,id):
 			formulario2.save()
 			estado=True
 			datos={'titulo':titulo,'formulario':formulario,'estado':estado,'titulo2':titulo2,'formulario2':formulario2}
-			return render_to_response("preguntas/registroPregunta.html",datos,context_instance=RequestContext(request))
+			return HttpResponseRedirect("/inicio/tema/edit/"+str(id)+"/")
 	else:
 		formulario=fpregunta(instance=pregunta)
 		formulario2=frespuesta(instance=respuesta)
