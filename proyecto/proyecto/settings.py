@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'proyecto.apps.usuario',
     'proyecto.apps.pregunta',
     'captcha',
+    'social.apps.django_app.default',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -91,6 +92,12 @@ USE_L10N = True
 USE_TZ = True
 
 
+#para facebook
+AUTHENTICATION_BACKENDS = (
+    'social.backends.facebook.FacebookAppOAuth2',
+    'social.backends.facebook.FacebookOAuth2',
+    'django.contrib.auth.backends.ModelBackend',
+)
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.7/howto/static-files/
 
@@ -102,3 +109,11 @@ MEDIA_ROOT=os.path.join(RUTA_PROYECTO,"media")
 
 RECAPTCHA_PUBLIC_KEY = '6Ld8d_0SAAAAAD2mxBDxsAwIf-qZLDHARDNy5due'
 RECAPTCHA_PRIVATE_KEY = '6Ld8d_0SAAAAAMmyYyjRuR-xEDddUbsFxPp94FTl'
+
+SOCIAL_AUTH_FACEBOOK_KEY = '869223446463275'
+SOCIAL_AUTH_FACEBOOK_SECRET = 'be4e4f54878e63d8bea99d3bf9893591'
+SOCIAL_AUTH_FACEBOOK_SCOPE = ['email']
+
+SOCIAL_AUTH_LOGIN_REDIRECT_URL = '/login/'
+SOCIAL_AUTH_LOGIN_URL = '/login/'
+

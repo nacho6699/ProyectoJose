@@ -35,7 +35,7 @@
 			{{formulario.as_p}}
 			{% csrf_token %}
 			<button type"submit" class="boton">Registrar</button>
-		</form>
-		
+		</form><br>
+	<label class="boton">sincronizar con >><a href="{% url 'social:begin' 'facebook' %}">Facebook</a></label>	
 	</div>
 {% endblock %}

@@ -62,7 +62,7 @@
 		<form id="fjuego" action="" method="post">
 			{% csrf_token %}
 			<label>Titulo:</label><br>
-			<input type="text"  name="username" id="inputEmail3" placeholder="Ingrese su nick"><br>
+			<input type="text"  name="username" id="inputEmail3" placeholder="Ingrese el titulo"><br>
 			<label>Tipo de partida :</label><br>
 			<input type="radio" name="group1" value="Milk"> Publica
 			<input type="radio" name="group1" value="Butter" checked> Privada<br><br>
@@ -89,10 +89,12 @@
   				<option value="3">60 segundos</option>
 			</select><br><br>
 			<label>Categorias:</label><br>
-				<input type="checkbox" name="pasa" value="ciencia">Ciencia<br>
-				<input type="checkbox" name="pasa" value="Biologia">Historia<br>
-				<input type="checkbox" name="pasa" value="Redes">Redes <br><br>
-		
+				
+			{% for i in temas %}
+				<input type="checkbox" name="tema" value="">{{i.nombre}}<br>
+			{% empty %}
+				<input type="checkbox" name="pasa" value="ciencia">ESta vacio<br>
+			{% endfor %} <br><br>
 			<button type="submit" class="botoncrear">Crear partida</button>
 			<button type="reset" class="cancelar">Cancelar</button>
 		</form>
